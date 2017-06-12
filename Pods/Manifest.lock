@@ -1,0 +1,49 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - MMProgressHUD (0.3.2)
+  - Reachability (3.0.0)
+  - SVProgressHUD (2.1.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - MMProgressHUD (from `https://github.com/mutualmobile/MMProgressHUD`)
+  - Reachability (~> 3.0.0)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  MMProgressHUD:
+    :git: https://github.com/mutualmobile/MMProgressHUD
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  MMProgressHUD:
+    :commit: c2eb2e03c298ea3801af717b038971032f7a3d31
+    :git: https://github.com/mutualmobile/MMProgressHUD
+  SVProgressHUD:
+    :commit: 38898de67823fa894f690820d94d3049904e307e
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MMProgressHUD: a913b116ba6791d67d37f9fb4211079200fb7595
+  Reachability: 31e4272bd8378e094beaf6609dc182c85c4e6574
+  SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
+
+PODFILE CHECKSUM: f9db15c23c0dc3e8b961126bf14d3bee7958e422
+
+COCOAPODS: 1.1.1

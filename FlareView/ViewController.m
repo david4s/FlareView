@@ -22,6 +22,8 @@
 
 
 #import "ViewController.h"
+#import <MMProgressHUD.h>
+#import <DCProgressHUD.h>
 
 @interface ViewController ()
 
@@ -32,6 +34,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+//    [MMProgressHUD showWithTitle:@"" status:@""];
+//    [SVProgressHUD showWithStatus:nil];
+//    [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:186/255.0f green:186/255.0f blue:186/255.0f alpha:0.7f]];
+//    [SVProgressHUD showProgressHUDCompleteMessage:@"HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO"Duration:3.0f];
+//    [SVProgressHUD showSuccessWithStatus:@"hello"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +47,23 @@
 }
 - (IBAction)didTappedSmiley:(id)sender {
     [[FlareView sharedCenter]flarify:self.smiley inParentView:self.view withColor:[UIColor yellowColor]];
+    [DCProgressHUD showProgressHUDCompleteMessage:@"HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO"Duration:3.0f];
 }
 - (IBAction)didTappedHeart:(id)sender {
     [[FlareView sharedCenter]flarify:self.heart inParentView:self.view withColor:[UIColor redColor]];
+//    [DCProgressHUD dismiss];
+    [DCProgressHUD show];
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 3.0 * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [DCProgressHUD dismissWithCompletion:^{
+            [self didTappedSmiley:nil];
+        }];
+    });
 
 }
 - (IBAction)didTappedStar:(id)sender {
     [[FlareView sharedCenter]flarify:self.star inParentView:self.view withColor:[UIColor blueColor]];
+    [DCProgressHUD showWithStatus:@"HELLO HELLO HELLO HELLO HELLO"];
 }
 
 
